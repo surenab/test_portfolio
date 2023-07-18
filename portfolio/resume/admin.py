@@ -8,7 +8,7 @@ class EducationAdmin(admin.ModelAdmin):
 
 
 class SkillAdmin(admin.ModelAdmin):
-    list_display = ["name", "value"]
+    list_display = ["name", "value", "user"]
     list_filter = ["value"]
     search_fields = ["name"]
 

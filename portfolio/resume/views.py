@@ -1,13 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Skill
+from blog.models import PersonalInfo
 
 
 def home(request):
-    skills = Skill.objects.all()
+    skills = Skill.objects.filter(user__username="admin")
+    personal_info = PersonalInfo.objects.get(user__username="surenabrahamyan")
     data = {
-        "first_name": "Suren",
-        "last_name": "Abrahamyan",
         "skills": skills,
+        "personal_info": personal_info,
     }
     return render(request, "index.html", context=data)

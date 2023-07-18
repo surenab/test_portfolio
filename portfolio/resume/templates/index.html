@@ -36,6 +36,11 @@
           ><i class="bx bx-envelope"></i> <span>Contact</span></a
         >
       </li>
+      <li>
+        <a href="/blog" class="nav-link"
+          ><i class="bx bxl-blogger"></i> <span>Blog</span></a
+        >
+      </li>
     </ul>
   </nav>
   <!-- .nav-menu -->
@@ -45,7 +50,7 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center">
   <div class="container" data-aos="zoom-in" data-aos-delay="100">
-    <h1>{{first_name}} {{last_name}}</h1>
+    <h1>{{personal_info.user.first_name}} {{personal_info.user.last_name}}</h1>
     <p>
       I'm
       <span
@@ -125,8 +130,8 @@
                 </li>
                 <li>
                   <i class="bi bi-chevron-right"></i>
-                  <strong>PhEmailone:</strong>
-                  <span>email@example.com</span>
+                  <strong>Email:</strong>
+                  <span>{{personal_info.user.email}}</span>
                 </li>
                 <li>
                   <i class="bi bi-chevron-right"></i>
