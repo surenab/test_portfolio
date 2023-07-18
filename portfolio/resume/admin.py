@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Education, Skill, Experience
+from .models import Education, Skill, Experience, Message
 
 
 class EducationAdmin(admin.ModelAdmin):
@@ -17,3 +17,4 @@ class SkillAdmin(admin.ModelAdmin):
 admin.site.register(Skill, SkillAdmin)
 admin.site.register(Education, EducationAdmin)
 admin.site.register(Experience)
+admin.site.register(Message)
